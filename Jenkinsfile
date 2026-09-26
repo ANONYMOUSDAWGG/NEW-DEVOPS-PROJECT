@@ -49,8 +49,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the updated stack with docker-compose'
-                bat 'docker compose down'
-                bat 'docker compose up -d --build'
+                bat 'docker-compose down'
+                bat 'docker-compose up -d --build'
             }
         }
     }
